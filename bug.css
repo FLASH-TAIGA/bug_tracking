@@ -1,0 +1,215 @@
+• {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex; /* Helps with layout alignment */
+    min-height: 100vh;
+}
+
+/* --- 2. Sidebar Navigation (Fixed to Left) --- */
+.sidebar {
+    float: left;
+    width: 230px;
+    background-color: #1a202c;
+    color: white;
+    padding: 2rem 1.5rem;
+    position: fixed; /* Keeps sidebar visible while scrolling */
+    height: 100vh;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.logo span {
+    color: #4fd1c5; /* Teal Accent */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.8rem;
+}
+
+.sidebar ul li a {
+    color: #cbd5e0;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.sidebar ul li a:hover, 
+.sidebar ul li a.active {
+    background-color: #2d3748;
+    color: white;
+}
+
+/* --- 3. Main Content Area (Offset for Sidebar) --- */
+.main-content {
+    margin-left: 250px; /* IMPORTANT: Matches sidebar width to prevent overlap */
+    flex: 1;
+    padding: 2rem;
+    width: calc(100% - 250px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* --- 4. UI Components: Cards & Grids --- */
+.stats-grid, .stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card, .stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.card h3, .stat-card h3 {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card .count {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Side borders for specific card types */
+.card.critical, .stat-card.critical { border-left: 5px solid #e53e3e; }
+.card.resolved, .stat-card.resolved { border-left: 5px solid #38a169; }
+.card.total, .stat-card.total { border-left: 5px solid #fbff00; }
+
+/* --- 5. Buttons & Forms --- */
+.btn-primary {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+/* --- 6. Table Styling --- */
+.table-container {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 1.2rem;
+    border-bottom: 1px solid #edf2f7;
+}
+
+th {
+    color: #718096;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    background-color: #f8fafc;
+}
+
+/* --- 7. Utility Badges & Statuses --- */
+.badge {
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Priority Colors */
+.high { background-color: #fed7d7; color: #c53030; }
+.medium { background-color: #feebc8; color: #c05621; }
+.low { background-color: #c6f6d5; color: #2f855a; }
+
+/* Status Text Colors */
+.status-open { color: #e53e3e; font-weight: bold; }
+.status-progress { color: #3182ce; font-weight: bold; }
+.status-resolved { color: #38a169; font-weight: bold; }
+
+/* Visual Chart Bar (for Reports) */
+.chart-bar {
+    height: 12px;
+    background: #4fd1c5;
+    border-radius: 10px;
+    margin: 10px 0 20px 0;
+}
+
+.popup {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 230px;
+            width: 50%;
+        }
+        .popup:target {
+            display: flex;
+        }
+        .dropbox{
+            width: 50%;
+            height: auto;
+        }

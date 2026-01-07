@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracker system</title>
+    <link rel="stylesheet" href="bug.css">
+    <!-- Using Google Fonts for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Bug<span>TRACKER</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="tickets.html">All Tickets</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Bug Tracking Dashboard</h1>
+                <a href="#popup"<button class="btn-primary">+ Report New Bug</button></a>
+                <!-- <a href="#popup" style="padding: 10px 20px; background-color: #007BFF; 
+                            color: #fff; text-decoration: none; border-radius: 5px;">Open Popup</a> -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Report New Bug</h2>
+            <form class="dropbox">
+                <input type="text" placeholder="ID">
+                <input type="text" placeholder="ISSUE TITLE">
+                <input type="text" placeholder="SYSTEM">
+                <input type="text" placeholder="PRIORITY">
+                <input type="text" placeholder="STATUS">
+                <input type="text" placeholder="ASSIGNED TO">
+            </form>
+            <a href="#" style="display: inline-block; margin-top: 10px; padding:
+                                5px 10px; background-color: #dc3545; color: #fff; text-decoration:
+                                none; border-radius: 3px;">Close</a>
+                                <a href="#" style="display: inline-block; margin-top: 10px; padding:
+                                5px 10px; background-color: #40dc35; color: #fff; text-decoration:
+                                none; border-radius: 3px;">Submit</a>
+        </div>
+    </div>
+            </header>
+
+            <!-- Stats Overview -->
+            <section class="stats-container">
+                <div class="stat-card total">
+                    <h3>Total Bugs</h3>
+                    <p class="count">24</p>
+                </div>
+                <div class="stat-card critical">
+                    <h3>Critical</h3>
+                    <p class="count">5</p>
+                </div>
+                <div class="stat-card resolved">
+                    <h3>Resolved</h3>
+                    <p class="count">12</p>
+                </div>
+            </section>
+
+            <!-- Bug Table -->
+            <section class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Issue Title</th>
+                            <th>System</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Assigned To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1042</td>
+                            <td>CRM Sync Error on Checkout</td>
+                            <td>CRM System</td>
+                            <td><span class="badge high">High</span></td>
+                            <td><span class="status-open">Open</span></td>
+                            <td>Patrick</td>
+                        </tr>
+                        <tr>
+                            <td>#1041</td>
+                            <td>Cloud Storage Timeout</td>
+                            <td>Azure Cloud</td>
+                            <td><span class="badge medium">Medium</span></td>
+                            <td><span class="status-progress">In Progress</span></td>
+                            <td>Godwill</td>
+                        </tr>
+                        <tr>
+                            <td>#1039</td>
+                            <td>Slack Notification Delay</td>
+                            <td>Comm. Tool</td>
+                            <td><span class="badge low">Low</span></td>
+                            <td><span class="status-resolved">Resolved</span></td>
+                            <td>Dev Team</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

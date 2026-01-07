@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tickets | RetailIT</title>
+    <link rel="stylesheet" href="bug.css">
+</head>
+<body>
+    <aside class="sidebar">
+            <div class="logo">Bug<span>TRACKER</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="tickets.html" class="active">All Tickets</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h1>Bug Tickets</h1>
+            <a href="#popup"<button class="btn-primary">+ Create Ticket</button></a>
+                <!-- <a href="#popup" style="padding: 10px 20px; background-color: #007BFF; 
+                            color: #fff; text-decoration: none; border-radius: 5px;">Open Popup</a> -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Report New Bug</h2>
+            <form class="dropbox">
+                <input type="text" placeholder="ID">
+                <input type="email" placeholder="ISSUE">
+                <input type="text" placeholder="SYSTEM">
+                <input type="text" placeholder="PRIORITY">
+                <input type="text" placeholder="STATUS">
+            </form>
+            <a href="#" style="display: inline-block; margin-top: 10px; padding:
+                                5px 10px; background-color: #dc3545; color: #fff; text-decoration:
+                                none; border-radius: 3px;">Close</a>
+                                <a href="#" style="display: inline-block; margin-top: 10px; padding:
+                                5px 10px; background-color: #62dc35; color: #fff; text-decoration:
+                                none; border-radius: 3px;">Submit</a>
+        </div>
+    </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr><th>ID</th><th>Issue</th><th>System</th><th>Priority</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>#201</td><td>API Timeout on CRM</td><td>Salesforce</td><td><span class="badge high">High</span></td><td><span class="badge open">Open</span></td></tr>
+                <tr><td>#198</td><td>Image upload failing</td><td>Azure Cloud</td><td><span class="badge medium">Med</span></td><td><span class="badge resolved">Resolved</span></td></tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

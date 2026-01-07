@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Settings | RetailIT</title>
+    <link rel="stylesheet" href="bug.css">
+</head>
+<body>
+    <aside class="sidebar">
+            <div class="logo">Bug<span>TRACKER</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="tickets.html">All Tickets</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header><h1>IT System Settings</h1></header>
+
+        <div class="card" style="max-width: 600px;">
+            <div class="form-group">
+                <label>Connected CRM</label>
+                <select>
+                    <option>Salesforce API</option>
+                    <option>HubSpot Integration</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Cloud Storage Region</label>
+                <input type="text" value="Azure - East US (Primary)">
+            </div>
+            <div class="form-group">
+                <label>Notification Webhook (Slack/Teams)</label>
+                <input type="text" placeholder="https://hooks.slack.com/services/...">
+            </div>
+            <button class="btn-primary">Save Configurations</button>
+        </div>
+    </main>
+</body>
+</html>
