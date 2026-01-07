@@ -140,7 +140,14 @@ input, select {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     overflow-x: auto;
 }
-
+.ticket_table {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow-x: auto;
+    width: 100%;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -258,4 +265,14 @@ th {
     .btn-primary { padding: 0.6rem 1rem; }
 
     .popup-content { width: 95%; margin: 0.5rem; }
+}
+
+/* --- Ticket table: convert to stacked cards on very small screens --- */
+@media (max-width: 480px) {
+    .ticket_table thead { display: none; }
+    .ticket_table, .ticket_table tbody, .ticket_table tr, .ticket_table td { display: block; width: 100%; }
+    .ticket_table tr { background: #fff; margin-bottom: 0.9rem; padding: 0.75rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #edf2f7; }
+    .ticket_table td { padding: 0.5rem 0; border: none; }
+    .ticket_table td::before { content: attr(data-label); display: block; font-weight: 600; color: #718096; margin-bottom: 0.35rem; }
+    .ticket_table td .badge { margin-top: 0.25rem; }
 }
